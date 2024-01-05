@@ -1,0 +1,17 @@
+button {
+  padding: 3px 5px;
+  margin: 2px;
+  border: 2px solid rebeccapurple;
+  color: rebeccapurple;
+  background-color: transparent;
+  font-family: inherit;
+
+  transition: all 0.3s ease;
+}
+
+button:focus,
+button:hover,
+button.active {
+  color: white;
+  background-color: rebeccapurple;
+}
