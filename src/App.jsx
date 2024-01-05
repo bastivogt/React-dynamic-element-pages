@@ -17,6 +17,15 @@ function App() {
     { name: "Contact", component: Contact },
   ]);
   const [currentPage, setCurrentPage] = useState(pages[0]);
+
+  const pageComponents = {
+    Home,
+    About,
+    Contact,
+  };
+
+  console.log("pageComponents", pageComponents);
+
   const render = useRerender();
 
   console.log(currentPage);
@@ -62,6 +71,7 @@ function App() {
       <hr />
       <DynamicElement is="h1">Test</DynamicElement>
       <Shizo is="h2">Test 2</Shizo>
+      <Shizo is={pageComponents["About"]}></Shizo>
       <hr />
       <button
         onClick={() => {
