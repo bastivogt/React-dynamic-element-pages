@@ -6,6 +6,7 @@ import "./App.css";
 
 import { useRerender } from "./hooks/useRerender";
 import DynamicElement from "./components/DynamicElement";
+import Shizo from "./components/Shizo";
 
 let renderCount = 0;
 
@@ -54,8 +55,13 @@ function App() {
         is={currentPage.component}
         onClick={() => console.log("Page clicked")}
       ></DynamicElement>
+      <Shizo
+        is={currentPage.component}
+        onClick={() => console.log("Page clicked Shizo")}
+      ></Shizo>
       <hr />
       <DynamicElement is="h1">Test</DynamicElement>
+      <Shizo is="h2">Test 2</Shizo>
       <hr />
       <button
         onClick={() => {
